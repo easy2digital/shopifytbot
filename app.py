@@ -13,7 +13,6 @@ def index():
 	flash("Please enter the Shopify store domain")
 	return render_template("index.html")
 
-
 @app.route("/StoreUrl", methods=["POST", "GET"])
 def StoreUrl():
 	flash("Great! " + str(request.form['name_input']) + " - This is its store data, check it out!")
