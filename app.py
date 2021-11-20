@@ -17,7 +17,7 @@ def index():
 @app.route("/StoreUrl", methods=["POST", "GET"])
 def StoreUrl():
 	flash("Great! " + str(request.form['name_input']) + " - This is its store data, check it out!")
-	wassersteinweb = []
+	shopifyweb = []
 	e1 = str(request.form['name_input'])
 
 	for x in range (1,3):
@@ -85,8 +85,8 @@ def StoreUrl():
 				'ComparePrice': ComparePrice
 				}
 
-			wassersteinweb.append(element_info)
+			shopifyweb.append(element_info)
 
-	df = pd.DataFrame(wassersteinweb)
+	df = pd.DataFrame(shopifyweb)
 	df.to_csv('shopifydata.csv')
 	return send_file('shopifydata.csv', mimetype='text/csv', attachment_filename='shopifydata.csv',as_attachment=True)
