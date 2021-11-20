@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Shopify Bot</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	</head>
+	<body>
+		<img src="http://www.easy2digital.com/wp-content/uploads/2018/07/Apple-OS-X-420x350-300x250-300x250.jpg" width=300 height="250">
+		<br>
+		<form action="StoreUrl" method="post">
+			{% for message in get_flashed_messages()%}
+				<p>{{message}}</p>
+			{% endfor %}
+			<br>
+			<input type="text" name="name_input">
+			<br>
+			<input type="submit" value="Download" id="download">
+		</form>
+	</body>
+</html>
