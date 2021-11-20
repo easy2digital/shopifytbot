@@ -88,5 +88,6 @@ def StoreUrl():
 			wassersteinweb.append(element_info)
 
 	df = pd.DataFrame(wassersteinweb)
-	df.to_csv('shopifydata.csv')
+	print(df)
+# 	df.to_csv('shopifydata.csv')
 	return render_template("index.html")
