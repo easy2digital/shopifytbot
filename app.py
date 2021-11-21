@@ -10,7 +10,7 @@ app.secret_key = "lousieasy2digital_8888001"
 @app.route("/hello")
 
 def index():
-	flash("Please enter the Shopify store domain")
+	flash("Please enter the Shopify store root domain, the URL format is http or https://www.abc.com/, or abc.com/")
 	return render_template("index.html")
 
 @app.route("/StoreUrl", methods=["POST", "GET"])
