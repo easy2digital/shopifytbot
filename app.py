@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 app.secret_key = "lousieasy2digital_8888001"
 
-@app.route("/hello")
+@app.route("/")
 
 def index():
 	flash("Sponsored by Easy2Digital (www.easy2digital.com) : Please enter the Shopify store root domain, the URL format is http or https://www.abc.com/, or abc.com/")
